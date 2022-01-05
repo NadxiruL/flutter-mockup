@@ -1,8 +1,8 @@
 import 'package:commerce/model/task.model.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +11,8 @@ class LoginScreen extends StatelessWidget {
           // ignore: prefer_const_constructors
           title: Text('Deligram'),
         ),
-        body: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+        body: ListView(
+            // crossAxisAlignment: CrossAxisAlignment.stretch,
             children: List.generate(
                 taskList.length,
                 (index) => TaskContainer(
@@ -36,17 +36,24 @@ class TaskContainer extends StatelessWidget {
           border: Border.all(),
         ),
         padding: const EdgeInsets.all(15.0),
-        child: Column(
+        child: Row(
           children: [
-            Text(
-              task.title,
-              style: TextStyle(fontSize: 24),
+            Expanded(
+              child: Column(
+                children: [
+                  Text(
+                    task.title,
+                    style: TextStyle(fontSize: 24),
+                  ),
+                  Container(),
+                  Text(
+                    task.descriptions,
+                    style: TextStyle(fontSize: 24),
+                  ),
+                ],
+              ),
             ),
-            Container(),
-            Text(
-              task.descriptions,
-              style: TextStyle(fontSize: 24),
-            ),
+            Icon(Icons.delete)
           ],
         ),
       ),

@@ -1,4 +1,5 @@
-import 'package:commerce/LoginScreen/loginscreen.dart';
+import 'package:commerce/screen/homescreen.dart';
+import 'package:commerce/screen/test.screen.dart';
 import 'package:flutter/material.dart';
 import 'dart:core';
 
@@ -16,6 +17,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.orange,
         ),
-        home: const LoginScreen());
+        home: const TestScreen());
   }
 }
