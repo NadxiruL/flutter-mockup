@@ -1,5 +1,6 @@
 import 'package:commerce/screen/homescreen.dart';
 import 'package:commerce/screen/login.screen.dart';
+import 'package:commerce/screen/studentscreen.dart';
 import 'package:flutter/material.dart';
 
 class TestScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class TestScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Column(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ElevatedButton(
@@ -20,7 +21,7 @@ class TestScreen extends StatelessWidget {
                 ),
               );
             },
-            child: Text('Home Screen'),
+            child: Text('StudetListScreen'),
           ),
           ElevatedButton(
             onPressed: () {
@@ -31,7 +32,7 @@ class TestScreen extends StatelessWidget {
                 ),
               );
             },
-            child: Text('Login Screen'),
+            child: const Text('Login Screen'),
           )
         ],
       ),
